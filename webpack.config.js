@@ -6,6 +6,7 @@ const postCSSPlugins = [
     require('autoprefixer')
 ]
 
+
 module.exports = {
     entry: './app/assets/scripts/App.js', 
     output: {
