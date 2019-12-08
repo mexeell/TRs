@@ -1,0 +1,17 @@
+.page-section{
+    padding: 4.5rem 0;
+
+    @media screen and (max-width: 530px) {
+        padding: 1.2rem 0;
+              
+    }
+    
+
+
+    &--blue{
+        background-color: #2f5572;
+        color: aliceblue;
+        
+
+    }
+}
