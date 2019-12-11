@@ -1,7 +1,9 @@
 .wrapper {
+    
+    overflow: hidden;
     padding-left: 15px;
     padding-right: 15px;
-    max-width: 1200px;
+    max-width: 1230px;
     margin-left: auto;
     margin-right: auto;
 
@@ -10,5 +12,12 @@
     }
     .wrapper{
         padding: 0 0;
+    }
+    &--b-margin{
+        margin-bottom: 3.87rem;
+
+        @media screen and (max-width: 530px) {
+            margin-bottom: 0.9rem;
+            }
     }
 }
