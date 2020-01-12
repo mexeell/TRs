@@ -1,0 +1,28 @@
+.section-title {
+    font-size: 3.75rem;
+    font-weight: 300;
+    text-align: center;
+
+    @media screen and (max-width: 530px) {
+        font-size: 2.55rem;
+        }
+
+    &__icon{
+        margin-right: .5rem;
+        display: inline-block;
+        margin-bottom: 0rem;
+
+        @media screen and (max-width: 530px) {
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+        margin-bottom: 0.5rem;
+        
+            }
+        
+    }
+
+    strong {
+        font-weight: 600;
+    }
+    }
