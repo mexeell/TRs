@@ -11,6 +11,8 @@
         margin-right: .5rem;
         display: inline-block;
         margin-bottom: 0rem;
+        position: relative;
+        top: 8px;
 
         @media screen and (max-width: 530px) {
         display: block;
@@ -24,5 +26,8 @@
 
     strong {
         font-weight: 600;
+    }
+    &--blue{
+        color: var(--main-blue);
     }
     }

@@ -2,15 +2,42 @@
     overflow: hidden;
     padding-left: 15px;
     padding-right: 15px;
-    max-width: 1230px;
+    max-width: 1236px;
     margin-left: auto;
     margin-right: auto;
 
     &--medium {
         max-width: 976px;
     }
+
+    &--no-padding-until-medium {
+        
+        padding-right: 18px;
+        padding-left: 18px;
+
+        @media screen and (max-width: 800px) {
+            padding-right: 0px;
+            padding-left: 0px;
+            
+            }         
+    }
+
+    &--no-padding-until-large {
+        
+        padding-right: 18px;
+        padding-left: 18px;
+
+        @media screen and (max-width: 1010px) {
+            padding-right: 0px;
+            padding-left: 0px;
+            
+            }         
+    }
+
+
     .wrapper {
-        padding: 0 0;
+        padding-left: 0;
+        padding-right: 0;
     }
     
     &--b-margin{
