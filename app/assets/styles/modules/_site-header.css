@@ -4,6 +4,11 @@
     z-index: 2;    
     width: 100%;
     padding: 10px 0;
+    transition: ;
+
+    &--is-expanded {
+        background-color: rgba(47, 85, 144, 0.55);
+    }
 
     @media screen and (min-width: 800px) {
 
@@ -12,9 +17,11 @@
     
 
     &__btn-container {
-        
-        float: right;
-    }
+                
+        @media screen and (min-width: 800px) {
+            float: right;
+        }
+     }
 
     &__logo {
 
@@ -39,28 +46,93 @@
     }
 
     &__menu-content {
-
-        display: none;
+        opacity: 0;
+        transform: scale(1.2);
+        transition: all .4s ease-out;
+        padding-top: 90px;
+        text-align: center;
+        z-index: -10;
+        position: relative;
 
         @media screen and (min-width: 800px) {
-
-            display: block;
+            opacity: 1;
+            z-index: 1;
+            padding-top: 0;
+            transform: scale(1); 
         }
+        
+        &--is-visible {            
+            opacity: 1;
+            z-index: 1;
+            transform: scale(1);
+        } 
     }
 
     &__menu-icon {
-
+        z-index: 10;
         width: 20px;
-        height: 20px;
-        background-color: white;
+        height: 19px;        
         position: absolute;
         top: 10px;
         right: 10px;
+
+        &::before {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 20px;
+            height: 3px;
+            background-color: whitesmoke;
+            transform-origin: 0 0%;
+            transition: transform .4s ease-out;
+        }
+
+        &__middle {
+            position: absolute;
+            top: 8px;
+            left: 0;
+            width: 20px;
+            height: 3px;
+            background-color: whitesmoke;
+            transition: all .4s ease-out;
+            transform-origin: 0 50%;
+        }
+
+        &::after {
+            content: "";
+            position: absolute;
+            bottom: 0px;
+            left: 0;
+            width: 20px;
+            height: 3px;
+            background-color: whitesmoke;
+            transform-origin: 0 100%;
+            transition: .4s ease-out;
+        }
 
         @media screen and (min-width: 800px) {
 
             display: none;
         }
-
+        
     }
+
+    &__menu-icon--close-x {
+        &::before {
+            transform: rotate(45deg) scaleX(1.25)
+        }
+
+        .site-header__menu-icon__middle {
+            opacity: 0;
+            transform: scaleX(0);
+        
+
+        }
+
+        &::after {
+            transform: rotate(-45deg) scaleX(1.25) translateY(1px)
+        }
+    }
+
 }
