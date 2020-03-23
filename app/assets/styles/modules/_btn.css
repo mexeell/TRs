@@ -1,22 +1,21 @@
-.btn{
-    background-color: #2f5572;
-    color: #FFF;
-    padding: 8px;
-    border-radius: 5px;
-    text-decoration: none;
-    padding: .075rem 1,2rem;
-    display: inline-block;
+.btn {
+  background-color: $mainBlue;
+  color: #FFF;
+  text-decoration: none;
+  padding: .75rem 1.2rem;
+  display: inline-block;
+  border-radius: 50px;
 
-    &--orange{
-        background-color: var(--main-orange);
+  &--orange {
+    background-color: $mainOrange;
+  }
+
+  &--large {
+    padding: 1.1rem 1.9rem;
+
+    @mixin atSmall {
+      font-size: 1.25rem;
     }
-    &--large{
-        font-size: 1.25rem;
-        padding: 0.9rem 1.9rem;
+  }
 
-        @media screen and (min-width: 530px) {
-            font-size: 2rem;
-            }
-
-    }
 }
